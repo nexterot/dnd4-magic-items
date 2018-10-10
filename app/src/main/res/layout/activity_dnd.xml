@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ru.nexterot.dnd.DndActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <TextView
+        android:id="@+id/maxLevelLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="Максимальный уровень"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemSpinner" />
+
+    <Button
+        android:id="@+id/decLevelButton"
+        android:layout_width="44dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:onClick="onDecLevelButtonClick"
+        android:text="-"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/maxLevelLabel"
+        app:layout_constraintTop_toBottomOf="@+id/itemSpinner" />
+
+    <EditText
+        android:id="@+id/levelValue"
+        android:layout_width="37dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        android:maxLength="2"
+        android:maxLines="1"
+        android:text="10"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/decLevelButton"
+        app:layout_constraintTop_toBottomOf="@+id/itemSpinner" />
+
+    <Button
+        android:id="@+id/incLevelButton"
+        android:layout_width="44dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:onClick="onIncLevelButtonClick"
+        android:text="+"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/levelValue"
+        app:layout_constraintTop_toBottomOf="@+id/itemSpinner" />
+
+    <Button
+        android:id="@+id/getItemButton"
+        android:layout_width="170dp"
+        android:layout_height="59dp"
+        android:onClick="getItemOnClick"
+        android:text="@string/button_text"
+        app:layout_constraintBottom_toTopOf="@+id/itemName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/modBonusValue" />
+
+    <Spinner
+        android:id="@+id/itemSpinner"
+        android:layout_width="282dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/itemName"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/modBonusValue"
+        android:layout_width="30dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        android:maxLength="1"
+        android:maxLines="1"
+        android:text="1"
+        app:layout_constraintStart_toEndOf="@+id/decBonusButton"
+        app:layout_constraintTop_toBottomOf="@+id/itemSpinner" />
+
+    <TextView
+        android:id="@+id/modBonusLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="Бонус улучшения:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemSpinner" />
+
+    <Button
+        android:id="@+id/decBonusButton"
+        android:layout_width="44dp"
+        android:layout_height="41dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:onClick="onDecBonusButtonClick"
+        android:text="-"
+        app:layout_constraintStart_toEndOf="@+id/modBonusLabel"
+        app:layout_constraintTop_toBottomOf="@+id/itemSpinner" />
+
+    <Button
+        android:id="@+id/incBonusButton"
+        android:layout_width="44dp"
+        android:layout_height="41dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:onClick="onIncBonusButtonClick"
+        android:text="+"
+        app:layout_constraintStart_toEndOf="@+id/modBonusValue"
+        app:layout_constraintTop_toBottomOf="@+id/itemSpinner" />
+
+</android.support.constraint.ConstraintLayout>

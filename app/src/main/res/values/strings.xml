@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">D&amp;D 4 Items</string>
+    <string name="button_text">Получить</string>
+
+    <string-array name="items_array">
+                <item>Оружие</item>
+                <item>Доспехи</item>
+    </string-array>
+</resources>
